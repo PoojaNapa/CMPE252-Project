@@ -1,0 +1,175 @@
+intents:
+  - greet
+  - goodbye
+  - happy
+  - sad
+  - appreciate
+  - book_flight
+  - start_end_location
+  - start_end_date
+  - no_of_passengers
+  - flight_choose
+  - get_email
+  - confirm_correct
+  - confirm_incorrect_endlocation
+  - confirm_incorrect_startlocation
+  - confirm_incorrect_startdate
+  - confirm_incorrect_returndate
+  - not_knowing
+  - trend
+  - winter_christmas
+  - activity_mention
+  - summer_vacation
+  - summer_activity_mention
+  - book_vacation_rental
+  - recognize_flight_and_rental_booking_location
+  - recognize_rental_booking_location
+  - duration_of_stay
+  - incomprehensible
+  - local_food
+  - local_activity
+  - feedback_good
+  - feedback_bad
+  - weather_forecast
+  - bot_detail
+
+slots:
+  startloc:
+    type: unfeaturized
+    auto_fill: true
+  endloc:
+    type: unfeaturized
+    auto_fill: true
+  startdate:
+    type: unfeaturized
+    auto_fill: true
+  returndate:
+    type: unfeaturized
+    auto_fill: true
+  airline:
+    type: unfeaturized
+    auto_fill: true
+  emailid:
+    type: unfeaturized
+    auto_fill: true
+  activity:
+    type: unfeaturized
+    auto_fill: true
+  rentalloc:
+    type: unfeaturized
+    auto_fill: true
+
+entities:
+  - startloc
+  - endloc
+  - startdate
+  - returndate
+  - airline
+  - emailid
+  - activity
+  - rentalloc
+
+actions:
+  - action_email_slot
+  - action_detail_flights
+  - action_detect_details
+  - action_suggest_places
+  - action_endloc_present
+  - action_detect_rentallocation
+  - action_suggest_rental
+  - action_local_food
+  - action_local_activities
+  - action_weather_api
+  
+responses:
+  utter_greet:
+  - text: "Hey there! I am PlaVak. I am here to help you plan the best vacation within the US. How are you?"
+  - text: "Hello! My name is PlaVak. I can assist you with your vacation planning. How are you doing?"
+
+  utter_appreciate:
+  - text: "Pleasure talking to you. Enjoy your trip."
+  - text: "Have a nice trip. Safe travels!"
+
+  utter_after_appreciate:
+  - text: "If you liked my service say 'Hurray!'. If not, say 'Boo!'."
+
+  utter_happy:
+  - text: "Awesome! How can I help you?"
+
+  utter_sad:
+  - text: "You dont sound happy! Hope this cheers you up: (https://www.newsweek.com/pikachu-talk-alexa-google-home-822412#slideshow/822411)."
+
+  utter_book_flight:
+  - text: "Can you please tell me your start and end location?"
+
+  utter_start_end_location:
+  - text: "Noted! Which dates do you want me to book the tickets? (For eg: Nov 13 to Nov 15)"
+
+  utter_start_end_date:
+  - text: "Please provide the number of passengers - Adults/Children"
+  
+  utter_ask_email:
+  - text: "Please provide your email id."
+
+  utter_no_of_passengers:  
+  - text: "Alright! I can find you availabilities in the following airlines: 1. Southwest, 2. United, 3. Alaska, 4. Frontier, 5. Delta. Which one would you like to choose?"
+
+  utter_confirmation:
+  - text: "If the details are correct, please type Yes. If anything is incorrect, please type the category followed by the correct detail (For eg type: Destination: CorrectDestination). Please provide one modification at a time."
+
+  utter_airline_time:
+  - text: "I found tickets available in {airline} which departs at 8.45AM from {startloc} on {startdate} and returns on {returndate} at 9PM from {endloc}"
+  - text: "I found tickets available in {airline} which departs at 1.45PM from {startloc} on {startdate} and returns on {returndate} at 5PM from {endloc}"
+  - text: "I found tickets available in {airline} which departs at 4PM from {startloc} on {startdate} and returns on {returndate} at 7.30AM from {endloc}"
+
+  utter_flight_choose:
+  - text: "I have sent an email with the tickets to {emailid} with all the links necessary to complete your payment. If you need help booking a vacation rental at your destination, please feel free to ping me."
+  
+  utter_after_flight_choose:
+  - text: "Due to constantly changing travel requirements, please review the CDC website for travel guidelines atleast 2 days before your departure (cdc.gov/coronavirus/2019-ncov/travelers/international-travel-during-covid19.html)." 
+
+  utter_not_knowing:
+  - text: "I can give you great ideas on the best vacation spot based on your preferences. When do you plan on travelling?"
+
+  utter_trend:
+  - text: "This is a beautiful time of the year when there are a plenty of options. You can choose from:- scenic spots with a display of fall colors, Northern lights chasing, places to build a snowman, go ice skating, skiing. What would you prefer?"
+
+  utter_winter_christmas:
+  - text: "Cool! What kind of activities would you like to do during this vacation (For eg., Northern Lights Chasing, skiing, etc.,)?"
+
+  utter_activity_mention:
+  - text: "Please review and choose the spot. Ping me as I can help you book flight tickets and also find you amazing vacation rentals."
+
+  utter_summer_vacation:
+  - text: "Superb! What kind of activities would you like to do during this vacation (For eg., chilling in beaches, hiking, etc.,)?"
+
+  utter_summer_activity_mention:
+  - text: "Please review and choose the spot. Ping me as I can help you book flight tickets and also find you amazing vacation rentals."
+
+  utter_recognize_flight_and_rental_booking_location:
+  - text: "Got it. What is your duration of stay?"
+
+  utter_duration_of_stay:
+  - text: "I found a number of great vacation rentals in {endloc}."
+
+  utter_duration_of_stay_deny:
+  - text: "I have sent you an email on {emailid} that contains vacation rental suggestions with more details. Please choose your favorite one and follow the links for payment."
+
+  utter_incomprehensible:
+  - text: "I am sorry. I could not understand your question. Please state clearly or contact customer service. Thank you!"
+
+  utter_goodbye:
+  - text: "Bye! See you."
+
+  utter_bot_detail:
+  - text: "Yes. I am a chatbot, powered by RASA. My name is PlaVak - a one stop shop for Planning Vacations."
+
+  utter_feedback_good:
+  - text: "Thank you! Glad I could help. Really appreciate your time."
+
+  utter_feedback_bad:
+  - text: "I am sorry. I will try and improve. Thanks for your time!"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
