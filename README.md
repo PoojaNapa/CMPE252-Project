@@ -12,9 +12,10 @@ Conversation Flow and Screenshots are present in ConversationFlow&Screenshots.pd
 Steps to follow while running this code:-
 
 1. Please run the .ipynb notebook.
-2. After setting up the ngrok tunnel from the notebook, install:- a) rasa 1.10.3 -> pip install rasa==1.10.3
-								  b) spacy -> python -m spacy download en
-								  c) nest-asyncio -> pip install nest_asyncio==1.3.3
+2. After setting up the ngrok tunnel from the notebook, install:- 
+	a) rasa 1.10.3 -> pip install rasa==1.10.3
+	b) spacy -> python -m spacy download en
+	c) nest-asyncio -> pip install nest_asyncio==1.3.3
 3. Please traverse to the folder where you have downloaded PlaVak Chatbot folder.
 4. Already trained model is present in the models/ folder. If you want to train it again, please enter 'rasa train'
 5. After training is completed, enter 'rasa run actions & rasa shell' and the chatbot will be loaded.
