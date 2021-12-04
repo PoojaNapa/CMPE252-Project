@@ -5,13 +5,13 @@ PlaVak is a travel chatbot that can assist users from start to end of vacation p
 ## Intents and Stories
 On the whole, 33 intents and 20 stories have been implemented.
 
-## Conversation Flow and Screenshots
-Conversation Flow and Screenshots are present in ConversationFlow&Screenshots.pdf file.
+## Suggested Conversation Flows and Screenshots
+Suggested conversation flows and screenshots are present in [ConversationFlow&Screenshots.pdf](ConversationFlow&Screenshots.pdf) file.
 
 ## How to run
 Steps to follow while running this code:-
 
-1. Please run the Plavak_Chatbot.ipynb notebook. After running all the cells, a link for ngrok tunnel will appear.
+1. Please run the [Plavak_Chatbot.ipynb](Plavak_Chatbot.ipynb) notebook. After running all the cells, a link for ngrok tunnel will appear.
 2. Click on the link, enter password 'chat' and open terminal. Install:- rasa 1.10.3 -> ```pip install rasa==1.10.3```
 3. Open the folder where you have downloaded PlaVak Chatbot folder.
 4. Already trained model is present in the models/ folder. If you want to train it again, please enter ```rasa train```
